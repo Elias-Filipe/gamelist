@@ -1,7 +1,6 @@
 package com.eliasfilipe.gamelist.dto;
 
 import com.eliasfilipe.gamelist.entities.Game;
-import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
