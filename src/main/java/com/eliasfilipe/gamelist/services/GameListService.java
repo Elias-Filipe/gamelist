@@ -1,8 +1,6 @@
 package com.eliasfilipe.gamelist.services;
 
 import com.eliasfilipe.gamelist.dto.GameListDTO;
-import com.eliasfilipe.gamelist.dto.GameMinDTO;
-import com.eliasfilipe.gamelist.entities.Game;
 import com.eliasfilipe.gamelist.entities.GameList;
 import com.eliasfilipe.gamelist.repositories.GameListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
