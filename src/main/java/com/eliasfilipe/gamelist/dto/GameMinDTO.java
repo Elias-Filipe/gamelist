@@ -1,6 +1,6 @@
 package com.eliasfilipe.gamelist.dto;
 
-import com.eliasfilipe.gamelist.Projection.GameMinProjection;
+import com.eliasfilipe.gamelist.projection.GameMinProjection;
 import com.eliasfilipe.gamelist.entities.Game;
 
 public class GameMinDTO {

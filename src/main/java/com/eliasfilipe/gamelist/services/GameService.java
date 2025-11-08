@@ -1,6 +1,6 @@
 package com.eliasfilipe.gamelist.services;
 
-import com.eliasfilipe.gamelist.Projection.GameMinProjection;
+import com.eliasfilipe.gamelist.projection.GameMinProjection;
 import com.eliasfilipe.gamelist.dto.GameDTO;
 import com.eliasfilipe.gamelist.dto.GameMinDTO;
 import com.eliasfilipe.gamelist.entities.Game;
@@ -23,7 +23,6 @@ public class GameService {
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 
-    //Fazer tratamento de exceçaão
     @Transactional(readOnly = true)
     public GameDTO findById(Long id){
         Game result = gameRepository.findById(id).get();

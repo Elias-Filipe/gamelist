@@ -1,6 +1,6 @@
 package com.eliasfilipe.gamelist.repositories;
 
-import com.eliasfilipe.gamelist.Projection.GameMinProjection;
+import com.eliasfilipe.gamelist.projection.GameMinProjection;
 import com.eliasfilipe.gamelist.entities.Game;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

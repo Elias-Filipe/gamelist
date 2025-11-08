@@ -1,4 +1,4 @@
-package com.eliasfilipe.gamelist.Projection;
+package com.eliasfilipe.gamelist.projection;
 
 public interface GameMinProjection {
 
