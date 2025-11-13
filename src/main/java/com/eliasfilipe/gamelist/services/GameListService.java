@@ -43,6 +43,5 @@ public class GameListService {
         for (int i = min; i <= max; i++) {
             gamelistRepository.updateBelongingPosition(listId, list.get(i).getId(), i);
         }
-
     }
 }
