@@ -1,12 +1,25 @@
 package com.eliasfilipe.gamelist.entities;
 
+import jakarta.persistence.*;
+
+import java.util.List;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(unique = true, nullable = false)
     private String name;
+    @Column(unique = true, nullable = false)
     private String email;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
 
     public User(){}
 

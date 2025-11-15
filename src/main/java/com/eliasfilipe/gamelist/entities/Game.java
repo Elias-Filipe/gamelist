@@ -2,6 +2,7 @@ package com.eliasfilipe.gamelist.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,6 +26,9 @@ public class Game {
 
     @Column(columnDefinition = "TEXT")
     private String longDescription;
+
+    @OneToMany(mappedBy = "game")
+    private List<Post> posts;
 
     public Game() {}
 
