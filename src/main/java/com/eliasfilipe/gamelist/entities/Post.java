@@ -10,7 +10,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String title;
     private String content;
 
@@ -24,7 +24,7 @@ public class Post {
 
     public Post() {}
 
-    public Post(int id, String title, String content, User user, Game game) {
+    public Post(long id, String title, String content, User user, Game game) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -32,11 +32,11 @@ public class Post {
         this.game = game;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
