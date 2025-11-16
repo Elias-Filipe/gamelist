@@ -9,7 +9,8 @@ public class UserDTO {
     private String name;
     private String email;
 
-    public UserDTO() {}
+    public UserDTO() {
+    }
 
     public UserDTO(User entity) {
         BeanUtils.copyProperties(entity, this);
