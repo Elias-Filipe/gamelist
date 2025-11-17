@@ -25,7 +25,7 @@ INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 9, 3);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 10, 4);
 
 INSERT INTO tb_user (id, name, email) VALUES (1, 'Elias Filipe', 'elias@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (2, 'maria', 'maria.andrade@example.com');
+INSERT INTO tb_user (id, name, email) VALUES (2, 'Maria Andrade', 'maria.andrade@example.com');
 INSERT INTO tb_user (id, name, email) VALUES (3, 'João Pereira', 'joao.pereira@example.com');
 INSERT INTO tb_user (id, name, email) VALUES (4, 'Ana Beatriz', 'ana.beatriz@example.com');
 INSERT INTO tb_user (id, name, email) VALUES (5, 'Rafael Costa', 'rafael.costa@example.com');
@@ -35,8 +35,8 @@ INSERT INTO tb_user (id, name, email) VALUES (8, 'Bruna Rocha', 'bruna.rocha@exa
 INSERT INTO tb_user (id, name, email) VALUES (9, 'Felipe Martins', 'felipe.martins@example.com');
 INSERT INTO tb_user (id, name, email) VALUES (10, 'Gabriela Santos', 'gabriela.santos@example.com');
 
--- INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (1, 'Primeiras impressões sobre Elden Ring', 'Jogo incrível, difícil mas muito recompensador!', 1, 1);
--- INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (2, 'The Witcher 3 ainda vale a pena!', 'Mesmo depois de anos, continua sendo um dos melhores RPGs.', 2, 2);
--- INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (3, 'God of War 2018 é uma obra-prima', 'A narrativa e o combate são perfeitos.', 3, 3);
--- INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (4, 'Dark Souls 2 é subestimado', 'Muita gente critica, mas eu realmente gostei do design dos mapas.', 1, 4);
--- INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (5, 'Cyberpunk 2077 agora está jogável', 'Depois dos patches recentes, finalmente ficou bom!', 2, 5);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (1, 'Primeiras impressões sobre Elden Ring', 'Jogo incrível, difícil mas muito recompensador!', 1, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (2, 'The Witcher 3 ainda vale a pena!', 'Mesmo depois de anos, continua sendo um dos melhores RPGs.', 2, 2);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (3, 'God of War 2018 é uma obra-prima', 'A narrativa e o combate são perfeitos.', 3, 3);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (4, 'Dark Souls 2 é subestimado', 'Muita gente critica, mas eu realmente gostei do design dos mapas.', 1, 4);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (5, 'Cyberpunk 2077 agora está jogável', 'Depois dos patches recentes, finalmente ficou bom!', 2, 5);

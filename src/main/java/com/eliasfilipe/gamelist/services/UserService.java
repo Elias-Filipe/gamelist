@@ -4,6 +4,7 @@ import com.eliasfilipe.gamelist.dto.UserDTO;
 import com.eliasfilipe.gamelist.dto.UserInsertDTO;
 import com.eliasfilipe.gamelist.dto.UserMinDTO;
 import com.eliasfilipe.gamelist.entities.User;
+import com.eliasfilipe.gamelist.repositories.PostRepository;
 import com.eliasfilipe.gamelist.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,8 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private PostRepository postRepository;
 
 
     @Transactional(readOnly = true)
@@ -50,6 +53,7 @@ public class UserService {
 
     @Transactional
     public void deleteById(Long id) {
+        postRepository.deleteByUserId(id);
         userRepository.deleteById(id);
     }
 
