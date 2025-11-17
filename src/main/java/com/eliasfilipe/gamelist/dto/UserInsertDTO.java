@@ -3,22 +3,21 @@ package com.eliasfilipe.gamelist.dto;
 import com.eliasfilipe.gamelist.entities.User;
 import org.springframework.beans.BeanUtils;
 
-import javax.management.relation.Role;
 
-public class UserDTO {
+public class UserInsertDTO {
 
     private long id;
     private String name;
     private String email;
     private String password;
-    private Role role;
 
-    public UserDTO() {
+    public UserInsertDTO() {
     }
 
-    public UserDTO(User entity) {
+    public UserInsertDTO(User entity) {
         BeanUtils.copyProperties(entity, this);
     }
+
 
     public long getId() {
         return id;
@@ -50,13 +49,5 @@ public class UserDTO {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
     }
 }

@@ -1,13 +1,13 @@
 package com.eliasfilipe.gamelist.controllers;
 
 import com.eliasfilipe.gamelist.dto.UserDTO;
+import com.eliasfilipe.gamelist.dto.UserInsertDTO;
 import com.eliasfilipe.gamelist.dto.UserMinDTO;
 import com.eliasfilipe.gamelist.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
@@ -29,4 +29,29 @@ public class UserController {
         return result;
     }
 
+    @GetMapping(value = "/name/{name}")
+    public UserDTO findByName(@PathVariable String name) {
+        UserDTO result = userService.findByName(name);
+        return result;
+    }
+
+    @PostMapping
+    public UserInsertDTO saveUser(@RequestBody UserInsertDTO userInsertDTO) {
+        return userService.saveUser(userInsertDTO);
+    }
+
+    @DeleteMapping(value = "/name/{name}")
+    public void deleteByName(@PathVariable String name) {
+        userService.deleteByName(name);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public void deleteById(@PathVariable Long id) {
+        userService.deleteById(id);
+    }
+
+    @PutMapping(value = "/{id}")
+    public UserDTO updateUser(@PathVariable Long id, @RequestBody UserInsertDTO userInsertDTO) {
+        return userService.updateUser(id, userInsertDTO);
+    }
 }
