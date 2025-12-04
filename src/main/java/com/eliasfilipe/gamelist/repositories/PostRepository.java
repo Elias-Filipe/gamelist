@@ -19,10 +19,10 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
 
     @Query(nativeQuery = true, value = """
-        SELECT p.id, p.title, p.content
-        FROM tb_post p
-        WHERE p.game_id = :gameId
-        ORDER BY p.id
+        SELECT post.id, post.title, post.content
+        FROM tb_post post
+        WHERE post.game_id = :gameId
+        ORDER BY post.id
         """)
     List<PostMinProjection> searchByGame(Long gameId);
 

@@ -35,7 +35,13 @@ INSERT INTO tb_user (id, name, email) VALUES (8, 'Bruna Rocha', 'bruna.rocha@exa
 INSERT INTO tb_user (id, name, email) VALUES (9, 'Felipe Martins', 'felipe.martins@example.com');
 INSERT INTO tb_user (id, name, email) VALUES (10, 'Gabriela Santos', 'gabriela.santos@example.com');
 
-INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (1, 'Primeiras impressões sobre Elden Ring', 'Jogo incrível, difícil mas muito recompensador!', 1, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (1, 'Muito dahora!','Muito dahora!', 1, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (6, 'Superou as expectativas.','Superou as expectativas.', 2, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (7, 'Não achei nada demais -_-','Não achei nada demais -_-', 3, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (8, 'Sou fã ferrenho, tá doido!','Sou fã ferrenho, tá doido!', 4, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (9, 'Depois do lançamento desse jogo eu não consio mais sair de casa','Depois do lançamento desse jogo eu não consio mais sair de casa', 5, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (10, 'Senti falta do glitch de montaria humana','Senti falta do glitch de montaria humana', 6, 1);
+INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (11, 'Fiquei que nem o Travolta jogando isso.','Fiquei que nem o Travolta jogando isso.', 7, 1);
 INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (2, 'The Witcher 3 ainda vale a pena!', 'Mesmo depois de anos, continua sendo um dos melhores RPGs.', 2, 2);
 INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (3, 'God of War 2018 é uma obra-prima', 'A narrativa e o combate são perfeitos.', 3, 3);
 INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (4, 'Dark Souls 2 é subestimado', 'Muita gente critica, mas eu realmente gostei do design dos mapas.', 1, 4);

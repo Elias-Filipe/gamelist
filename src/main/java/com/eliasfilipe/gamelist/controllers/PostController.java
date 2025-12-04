@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "posts")
+@RequestMapping(value = "/posts")
 public class PostController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class PostController {
         return result;
     }
 
-    @GetMapping(value = "/posts/{game}")
+    @GetMapping(value = "/game/{gameId}")
     public List<PostMinDTO> findByGame(@PathVariable Long gameId) {
         List<PostMinDTO> result = postService.findByGameId(gameId);
         return result;
