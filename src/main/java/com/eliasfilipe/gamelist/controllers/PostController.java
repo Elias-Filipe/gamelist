@@ -2,6 +2,7 @@ package com.eliasfilipe.gamelist.controllers;
 
 
 import com.eliasfilipe.gamelist.dto.PostDTO;
+import com.eliasfilipe.gamelist.dto.PostMinDTO;
 import com.eliasfilipe.gamelist.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,12 @@ public class PostController {
     @GetMapping(value = "/{id}")
     public PostDTO findById(@PathVariable Long id) {
         PostDTO result = postService.findById(id);
+        return result;
+    }
+
+    @GetMapping(value = "/posts/{game}")
+    public List<PostMinDTO> findByGame(@PathVariable Long gameId) {
+        List<PostMinDTO> result = postService.findByGameId(gameId);
         return result;
     }
 

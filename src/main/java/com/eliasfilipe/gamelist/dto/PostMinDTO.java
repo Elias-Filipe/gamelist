@@ -3,22 +3,23 @@ package com.eliasfilipe.gamelist.dto;
 import com.eliasfilipe.gamelist.entities.Post;
 import com.eliasfilipe.gamelist.projection.PostMinProjection;
 
-public class PostDTO {
+public class PostMinDTO {
 
     private long id;
     private String title;
     private String content;
-    private UserMinDTO user;
-    private GameMinDTO game;
 
-    public PostDTO(PostMinProjection x){}
 
-    public PostDTO(Post entity) {
+    public PostMinDTO(Post entity) {
         id = entity.getId();
         title = entity.getTitle();
         content = entity.getContent();
-        user = new UserMinDTO(entity.getUser());
-        game = new GameMinDTO(entity.getGame());
+    }
+
+    public PostMinDTO(PostMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        content = projection.getContent();
     }
 
     public long getId() {
@@ -45,19 +46,5 @@ public class PostDTO {
         this.content = content;
     }
 
-    public UserMinDTO getUser() {
-        return user;
-    }
 
-    public void setUser(UserMinDTO user) {
-        this.user = user;
-    }
-
-    public GameMinDTO getGame() {
-        return game;
-    }
-
-    public void setGame(GameMinDTO game) {
-        this.game = game;
-    }
 }
