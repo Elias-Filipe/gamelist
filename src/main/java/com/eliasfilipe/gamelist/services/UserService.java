@@ -3,6 +3,7 @@ package com.eliasfilipe.gamelist.services;
 import com.eliasfilipe.gamelist.dto.UserDTO;
 import com.eliasfilipe.gamelist.dto.UserInsertDTO;
 import com.eliasfilipe.gamelist.dto.UserMinDTO;
+import com.eliasfilipe.gamelist.entities.Role;
 import com.eliasfilipe.gamelist.entities.User;
 import com.eliasfilipe.gamelist.repositories.PostRepository;
 import com.eliasfilipe.gamelist.repositories.UserRepository;
@@ -42,6 +43,7 @@ public class UserService {
     @Transactional
     public UserInsertDTO saveUser(UserInsertDTO userInsertDTO) {
         User result = new User(userInsertDTO);
+        result.setRole(Role.USER);
         result = userRepository.save(result);
         return new UserInsertDTO(result);
     }

@@ -39,6 +39,10 @@ public class User {
     }
 
     public User(UserInsertDTO userInsertDTO) {
+        this.name = userInsertDTO.getName();
+        this.email = userInsertDTO.getEmail();
+        this.password = userInsertDTO.getPassword();
+        this.role = Role.USER;
     }
 
     public long getId() {

@@ -1,9 +1,10 @@
 package com.eliasfilipe.gamelist.dto;
 
+import com.eliasfilipe.gamelist.entities.Role;
 import com.eliasfilipe.gamelist.entities.User;
 import org.springframework.beans.BeanUtils;
 
-import javax.management.relation.Role;
+
 
 public class UserDTO {
 

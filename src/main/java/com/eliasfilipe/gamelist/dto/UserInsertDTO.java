@@ -1,12 +1,12 @@
 package com.eliasfilipe.gamelist.dto;
 
+import com.eliasfilipe.gamelist.entities.Role;
 import com.eliasfilipe.gamelist.entities.User;
 import org.springframework.beans.BeanUtils;
 
 
 public class UserInsertDTO {
 
-    private long id;
     private String name;
     private String email;
     private String password;
@@ -18,14 +18,6 @@ public class UserInsertDTO {
         BeanUtils.copyProperties(entity, this);
     }
 
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

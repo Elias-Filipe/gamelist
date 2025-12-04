@@ -24,16 +24,16 @@ INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 8, 2);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 9, 3);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 10, 4);
 
-INSERT INTO tb_user (id, name, email) VALUES (1, 'Elias Filipe', 'elias@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (2, 'Maria Andrade', 'maria.andrade@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (3, 'João Pereira', 'joao.pereira@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (4, 'Ana Beatriz', 'ana.beatriz@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (5, 'Rafael Costa', 'rafael.costa@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (6, 'Carla Souza', 'carla.souza@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (7, 'Lucas Moreira', 'lucas.moreira@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (8, 'Bruna Rocha', 'bruna.rocha@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (9, 'Felipe Martins', 'felipe.martins@example.com');
-INSERT INTO tb_user (id, name, email) VALUES (10, 'Gabriela Santos', 'gabriela.santos@example.com');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (1, 'Elias Filipe', 'elias@example.com', '1234', 'ADMIN');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (2, 'Maria Andrade', 'maria.andrade@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (3, 'João Pereira', 'joao.pereira@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (4, 'Ana Beatriz', 'ana.beatriz@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (5, 'Rafael Costa', 'rafael.costa@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (6, 'Carla Souza', 'carla.souza@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (7, 'Lucas Moreira', 'lucas.moreira@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (8, 'Bruna Rocha', 'bruna.rocha@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (9, 'Felipe Martins', 'felipe.martins@example.com', '1234', 'USER');
+INSERT INTO tb_user (id, name, email, password, role) VALUES (10, 'Gabriela Santos', 'gabriela.santos@example.com', '1234', 'USER');
 
 INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (1, 'Muito dahora!','Muito dahora!', 1, 1);
 INSERT INTO tb_post (id, title, content, user_id, game_id) VALUES (6, 'Superou as expectativas.','Superou as expectativas.', 2, 1);
