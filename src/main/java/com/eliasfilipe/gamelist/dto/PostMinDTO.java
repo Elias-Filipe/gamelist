@@ -8,18 +8,22 @@ public class PostMinDTO {
     private long id;
     private String title;
     private String content;
+    private String author;
+
 
 
     public PostMinDTO(Post entity) {
         id = entity.getId();
         title = entity.getTitle();
         content = entity.getContent();
+
     }
 
     public PostMinDTO(PostMinProjection projection) {
         id = projection.getId();
         title = projection.getTitle();
         content = projection.getContent();
+        author = projection.getAuthor();
     }
 
     public long getId() {
@@ -46,5 +50,11 @@ public class PostMinDTO {
         this.content = content;
     }
 
+    public String getAuthor() {
+        return author;
+    }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }
