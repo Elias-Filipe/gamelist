@@ -30,8 +30,8 @@ public class UserController {
     }
 
     @GetMapping(value = "/name/{name}")
-    public UserDTO findByName(@PathVariable String name) {
-        UserDTO result = userService.findByName(name);
+    public UserDTO findUserByName(@PathVariable String name) {
+        UserDTO result = userService.findUserByName(name);
         return result;
     }
 

@@ -35,8 +35,8 @@ public class UserService {
     }
 
     @Transactional(readOnly = true)
-    public UserDTO findByName(String name) {
-        User result = userRepository.findByName(name).orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
+    public UserDTO findUserByName(String name) {
+        User result = userRepository.findUserByName(name).orElseThrow(() -> new RuntimeException("Usuário não encontrado."));
         return new UserDTO(result);
     }
 
