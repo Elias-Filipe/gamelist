@@ -1,6 +1,5 @@
 package com.eliasfilipe.gamelist.config;
 
-
 import com.eliasfilipe.gamelist.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -30,9 +29,18 @@ public class SecurityFilter extends OncePerRequestFilter {
             var login = tokenConfig.validateToken(token);
             UserDetails user = userRepository.findByName(login);
 
-            var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            if (user != null) {
+                var authentication = new UsernamePasswordAuthenticationToken(
+                        user,
+                        null,
+                        user.getAuthorities()
+                );
+
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            }
         }
+
+
         filterChain.doFilter(request, response);
     }
 
@@ -42,4 +50,3 @@ public class SecurityFilter extends OncePerRequestFilter {
         return authHeader.replace("Bearer ", "");
     }
 }
-
