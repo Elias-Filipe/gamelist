@@ -1,6 +1,5 @@
 package com.eliasfilipe.gamelist.controllers;
 
-
 import com.eliasfilipe.gamelist.dto.PostDTO;
 import com.eliasfilipe.gamelist.dto.PostMinDTO;
 import com.eliasfilipe.gamelist.services.PostService;
