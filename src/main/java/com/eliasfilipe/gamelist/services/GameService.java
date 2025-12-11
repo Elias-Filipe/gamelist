@@ -1,5 +1,7 @@
 package com.eliasfilipe.gamelist.services;
 
+import com.eliasfilipe.gamelist.dto.UserDTO;
+import com.eliasfilipe.gamelist.entities.User;
 import com.eliasfilipe.gamelist.projection.GameMinProjection;
 import com.eliasfilipe.gamelist.dto.GameDTO;
 import com.eliasfilipe.gamelist.dto.GameMinDTO;
@@ -35,4 +37,9 @@ public class GameService {
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 
+    @Transactional(readOnly = true)
+    public GameMinDTO findGameByTitle(String title) {
+        Game result = gameRepository.findGameByTitle(title).orElseThrow(() -> new RuntimeException("Game não encontrado."));
+        return new GameMinDTO(result);
+    }
 }
